@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Organic Mechanism Hub 🧪</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600&family=Noto+Sans+Myanmar:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/mhchem.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js"></script>
+<script defer src="script.js"></script>
+</head>
+<body>
+<header class="hero">
+  <div class="flask" aria-hidden="true">🧪</div>
+  <div>
+    <h1>Organic Mechanism Hub</h1>
+    <p>$S_N1$ · $S_N2$ · $E1$ · $E2$ — predict, watch, practise.</p>
+    <p class="my">ဓာတ်ပြုမှု ယန္တရားများကို အလွယ်တကူ လေ့လာကြမယ်</p>
+  </div>
+</header>
+
+<nav class="tabs" role="tablist">
+  <button class="tab on" data-tab="predict" role="tab">🌳 Predictor</button>
+  <button class="tab" data-tab="visual" role="tab">🏹 Visualizer</button>
+  <button class="tab" data-tab="quiz" role="tab">🎯 Quiz Bot</button>
+</nav>
+
+<main>
+  <section id="predict" class="panel on">
+    <h2>Which pathway wins?</h2>
+    <p class="hint">Pick the conditions, then ask the tree.</p>
+    <div class="group"><h3>Substrate (alkyl halide)</h3><div class="chips" id="c-sub"></div></div>
+    <div class="group"><h3>Nucleophile / base</h3><div class="chips" id="c-reag"></div></div>
+    <div class="group"><h3>Solvent</h3><div class="chips" id="c-solv"></div></div>
+    <div class="group"><h3>Temperature</h3><div class="chips" id="c-temp"></div></div>
+    <button class="btn" id="go">Predict ✨</button>
+    <div id="result" class="result" hidden></div>
+  </section>
+
+  <section id="visual" class="panel">
+    <h2>Mechanism visualizer</h2>
+    <p class="hint">Curved arrows show where an electron pair moves.</p>
+    <div class="pills" id="mech-pills"></div>
+    <div class="stage"><svg id="svg" viewBox="0 0 640 220" role="img" aria-label="Mechanism step"></svg></div>
+    <div class="stepinfo"><h3 id="st-title"></h3><p id="st-desc"></p></div>
+    <div class="ctrl">
+      <button class="btn ghost" id="prev">← Back</button>
+      <div class="dots" id="dots"></div>
+      <button class="btn ghost" id="next">Next →</button>
+    </div>
+  </section>
+
+  <section id="quiz" class="panel">
+    <h2>Quiz bot</h2>
+    <div id="quiz-box"></div>
+  </section>
+</main>
+
+<footer>Made with 💗 for organic chemistry · KaTeX renders the math</footer>
+</body>
+</html>
